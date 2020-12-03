@@ -2,15 +2,15 @@ let commissions = document.getElementById("liste-commissions");
 let textSaisie = document.getElementById("textSaisie").toString();
 
 // creation de l'item de liste
-
-function createNewItem(texte) {
+function createNewItem(text) {
     let newItem = document.createElement("li");
-    texte = textSaisie;
-    newItem.innerHTML = texte;
+    newItem.innerHTML = text;
     commissions.append(newItem);
     return newItem;
 }
 
 function submit (){
-    createNewItem();
+    createNewItem(textSaisie.toString());
 }
+
+console.log(submit());
