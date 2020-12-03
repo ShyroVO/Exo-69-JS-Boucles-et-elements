@@ -1,4 +1,16 @@
 let commissions = document.getElementById("liste-commissions");
+let textSaisie = document.getElementById("textSaisie").toString();
 
-document.createElement("li");
-document.createTextNode("oeufs");
+// creation de l'item de liste
+
+function createNewItem(texte) {
+    let newItem = document.createElement("li");
+    texte = textSaisie;
+    newItem.innerHTML = texte;
+    commissions.append(newItem);
+    return newItem;
+}
+
+function submit (){
+    createNewItem();
+}
