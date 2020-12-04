@@ -10,4 +10,4 @@ function createNewItem (){
 
 }
 
-submitBouton.addEventListener("click",createNewItem());
+submitBouton.addEventListener("click",createNewItem);
