@@ -1,5 +1,5 @@
 let commissions = document.getElementById("liste-commissions");
-let textSaisie = document.getElementById("textSaisie").toString();
+let textSaisie = document.getElementById("textSaisie");
 
 // creation de l'item de liste
 function createNewItem(text) {
@@ -10,7 +10,7 @@ function createNewItem(text) {
 }
 
 function submit (){
-    createNewItem(textSaisie.toString());
+    createNewItem(textSaisie.value);
 }
 
-console.log(submit());
+console.log(textSaisie);
