@@ -1,16 +1,13 @@
 let commissions = document.getElementById("liste-commissions");
+let submitBouton = document.getElementById("submitBouton");
 let textSaisie = document.getElementById("textSaisie");
+let textSaisieValue = textSaisie.value;
 
-// creation de l'item de liste
-function createNewItem(text) {
+function createNewItem (){
     let newItem = document.createElement("li");
-    newItem.innerHTML = text;
+    newItem.innerHTML = textSaisieValue;
     commissions.append(newItem);
-    return newItem;
+
 }
 
-function submit (){
-    createNewItem(textSaisie.value);
-}
-
-console.log(textSaisie);
+submitBouton.addEventListener("click",createNewItem());
