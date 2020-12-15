@@ -1,13 +1,16 @@
 let commissions = document.getElementById("liste-commissions");
-let submitBouton = document.getElementById("submitBouton");
-let textSaisie = document.getElementById("textSaisie");
-let textSaisieValue = textSaisie;
 
-function createNewItem (){
+document.getElementById('boutonEnvois').addEventListener('click', function ajoutItem () {
+    let textSaisie = document.getElementById("textSaisie").value;
     let newItem = document.createElement("li");
-    newItem.innerHTML = textSaisieValue.value;
     commissions.append(newItem);
+    newItem.innerHTML = textSaisie;
+})
 
-}
+document.getElementById('boutonSup').addEventListener('click', function supItem (){
 
-submitBouton.addEventListener("click",createNewItem);
+    if (commissions.childElementCount !== 0) {
+        commissions.removeChild(commissions.lastElementChild);
+    }
+
+})
